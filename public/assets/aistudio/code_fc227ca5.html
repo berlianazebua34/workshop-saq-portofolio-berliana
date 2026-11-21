@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Berliana Putri Sanora Zebua · Portfolio</title>
+<!-- Tailwind CSS v3 with Forms & Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obsidian: {
+              950: '#0E0A0B',
+              900: '#151011',
+              850: '#1D1618',
+              800: '#251D20',
+            },
+            blush: {
+              50: '#FDF9F9',
+              100: '#F9F1F1',
+              150: '#F3E8E8',
+              200: '#EFE3E2',
+              300: '#E4CFD0',
+              400: '#D9B5B8',
+              500: '#B86B77',
+              600: '#9E4E5A',
+            },
+            roseGlow: {
+              DEFAULT: '#F9B8C4',
+              bright: '#FFCCD6',
+              deep: '#D97C8F'
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<!-- BEGIN: Custom Styles -->
+<style data-purpose="glow-and-glassmorphism">
+    /* Ethereal Glow Shadows */
+    .glow-rose-sm {
+      box-shadow: 0 0 20px -3px rgba(249, 184, 196, 0.35);
+    }
+    .glow-rose-md {
+      box-shadow: 0 0 35px -2px rgba(249, 184, 196, 0.45);
+    }
+    .glow-rose-lg {
+      box-shadow: 0 0 50px 0 rgba(249, 184, 196, 0.35);
+    }
+    .glow-border {
+      border: 1px solid rgba(249, 184, 196, 0.32);
+    }
+    .glow-border-hover:hover {
+      border-color: rgba(249, 184, 196, 0.65);
+      box-shadow: 0 0 25px rgba(249, 184, 196, 0.3);
+    }
+    .glass-obsidian {
+      background: rgba(21, 16, 17, 0.72);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .glass-blush {
+      background: rgba(239, 227, 226, 0.88);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+  </style>
+<style data-purpose="typography-and-decor">
+    /* Subtle editorial text styling */
+    .tracking-widest-plus {
+      letter-spacing: 0.18em;
+    }
+    /* Ambient backdrop grid */
+    .editorial-dots {
+      background-image: radial-gradient(rgba(249, 184, 196, 0.12) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+  </style>
+<!-- END: Custom Styles -->
+</head>
+<body class="bg-obsidian-950 font-sans text-neutral-800 antialiased selection:bg-roseGlow selection:text-obsidian-950">
+<!-- BEGIN: MainHeroContainer -->
+<!-- Outer Wrapper with deep background -->
+<div class="relative w-full px-2 sm:px-4 pt-3 pb-8 max-w-7xl mx-auto">
+<!-- Hero Card Canvas (#151011 with rounded bottom-corners 36px & glow) -->
+<header class="relative bg-obsidian-900 text-[#FBF4F4] rounded-[36px] overflow-hidden border border-roseGlow/25 glow-rose-md pb-12 sm:pb-16 pt-5 px-5 sm:px-10 lg:px-12 editorial-dots">
+<!-- Top Ambient Gradient Light -->
+<div class="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-roseGlow/15 rounded-full blur-[120px]"></div>
+<!-- BEGIN: Navigation -->
+<nav class="relative z-20 flex items-center justify-between pb-8 border-b border-white/10" data-purpose="primary-navigation">
+<!-- Brand/Identity -->
+<a class="flex items-center gap-2 group" href="#hero">
+<span class="w-2.5 h-2.5 rounded-full bg-roseGlow inline-block animate-pulse"></span>
+<span class="font-serif text-xl sm:text-2xl font-semibold tracking-wide text-[#FBF4F4] group-hover:text-roseGlow transition duration-300">
+            Berliana Putri S.Z.
+          </span>
+</a>
+<!-- Desktop Menu Links -->
+<div class="hidden md:flex items-center space-x-7 text-xs font-semibold uppercase tracking-widest-plus text-neutral-300">
+<a class="text-roseGlow transition-colors duration-200" href="#hero">HOME</a>
+<a class="hover:text-roseGlow transition-colors duration-200" href="#about">ABOUT</a>
+<a class="hover:text-roseGlow transition-colors duration-200" href="#skills">SKILLS</a>
+<a class="hover:text-roseGlow transition-colors duration-200" href="#projects">PROJECTS</a>
+<a class="hover:text-roseGlow transition-colors duration-200" href="#journey">JOURNEY</a>
+</div>
+<!-- Contact CTA Pill Button -->
+<a class="inline-flex items-center justify-center px-6 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-roseGlow text-obsidian-950 hover:bg-roseGlow-bright transition-all duration-300 glow-rose-sm transform hover:-translate-y-0.5" href="mailto:berlianaputrizebua@gmail.com">
+          CONTACT
+        </a>
+</nav>
+<!-- END: Navigation -->
+<!-- BEGIN: HeroMainGrid -->
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 pt-10 sm:pt-14 items-center" id="hero">
+<!-- Left Hero Content Column -->
+<div class="lg:col-span-7 flex flex-col justify-center">
+<!-- Eyebrow Pill -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-roseGlow/30 w-fit mb-6">
+<span class="w-1.5 h-1.5 rounded-full bg-roseGlow"></span>
+<span class="text-[11px] sm:text-xs font-semibold uppercase tracking-widest text-roseGlow">
+              PORTFOLIO · BERLIANA PUTRI SANORA ZEBUA
+            </span>
+</div>
+<!-- Editorial Serif Headline -->
+<h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-light tracking-tight text-[#FBF4F4] leading-[1.08] mb-6">
+<span class="block italic text-roseGlow/90 font-normal">Design with purpose.</span>
+<span class="block font-medium" id="role-headline-target">Information Systems Student.</span>
+</h1>
+<!-- Subtitle / Bio summary -->
+<p class="text-neutral-300 text-sm sm:text-base leading-relaxed max-w-xl mb-8 font-light">
+            Mahasiswa S1 Sistem Informasi di Institut Teknologi PLN yang antusias mempelajari pemrograman, pengembangan profil digital, dan kerja sama tim.
+          </p>
+<!-- Action CTAs -->
+<div class="flex flex-wrap items-center gap-4 mb-9">
+<a class="px-7 py-3 rounded-full text-xs sm:text-sm font-semibold tracking-wide bg-roseGlow text-obsidian-950 hover:bg-roseGlow-bright glow-rose-md hover:glow-rose-lg transition-all duration-300 flex items-center gap-2 transform hover:-translate-y-0.5" href="#projects">
+<span>EXPLORE PROJECTS</span>
+<span class="text-sm">→</span>
+</a>
+<a class="px-6 py-3 rounded-full text-xs sm:text-sm font-semibold tracking-wide bg-white/5 text-neutral-200 border border-white/15 hover:border-roseGlow/60 hover:text-white transition-all duration-300" href="#about">
+              ABOUT ME
+            </a>
+</div>
+<!-- Interactive Role Switcher Pills -->
+<div class="flex flex-wrap gap-2.5 pt-2 border-t border-white/10" data-purpose="role-switcher">
+<button class="role-pill active inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-[11px] font-semibold tracking-wider bg-roseGlow/20 border border-roseGlow text-roseGlow cursor-pointer transition-all duration-300" id="role-btn-1" onclick="switchRole(1)" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-roseGlow animate-ping"></span>
+<span>01 INFORMATION SYSTEMS STUDENT</span>
+</button>
+<button class="role-pill inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-[11px] font-semibold tracking-wider bg-white/5 border border-white/10 text-neutral-400 hover:text-neutral-200 cursor-pointer transition-all duration-300" id="role-btn-2" onclick="switchRole(2)" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-neutral-500"></span>
+<span>02 C++ &amp; WEB PROFILE CREATOR</span>
+</button>
+</div>
+</div>
+<!-- END: Left Hero Content Column -->
+<!-- Right Hero Visual Stage -->
+<div class="lg:col-span-5 relative flex justify-center items-center">
+<div class="relative w-full max-w-md lg:max-w-none rounded-3xl overflow-hidden p-2 bg-gradient-to-b from-roseGlow/30 via-roseGlow/10 to-transparent glow-rose-md border border-roseGlow/40">
+<!-- Glow Butterfly Image -->
+<div class="relative rounded-2xl overflow-hidden bg-obsidian-950 aspect-[4/3] sm:aspect-square flex items-center justify-center">
+<img alt="A luminous ethereal translucent glowing rose-pink butterfly with delicate glowing light trails and ambient bokeh particles on deep espresso obsidian black background, soft rose rim lighting, premium editorial aesthetic" class="w-full h-full object-cover object-center transform hover:scale-105 transition duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9dAl46w97mkSoopoto8uf-k8AABg-bvFJUfD2_p-HRMmE6QSyggZLyl9lCuxIdYU8MPPu41Lh2PGk9ns781kmaUPQfy1QgzLJ3kmhPSpeMdW8Oz_WhvIW7VprthsDocbKRDmA1Wwao5sKferBxiwJUD299Miw0BeLEpOeVUuo6VefkpY0Busm2hnq2yKuxk6iU7SAmQseEUQ4CQ_8KwT6ehp7tNPbzCphY3ic6Cw"/>
+<!-- Soft Rose Rim Overlay -->
+<div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-obsidian-950/80 via-transparent to-roseGlow/15"></div>
+<!-- Floating Glass Badge -->
+<div class="absolute bottom-4 left-4 right-4 glass-obsidian p-3 rounded-2xl border border-roseGlow/30 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-roseGlow/20 border border-roseGlow/50 flex items-center justify-center text-roseGlow text-xs">
+                    ✦
+                  </div>
+<div>
+<p class="text-xs font-semibold text-white tracking-wide">S1 Sistem Informasi</p>
+<p class="text-[11px] text-roseGlow/80">Institut Teknologi PLN</p>
+</div>
+</div>
+<span class="text-[10px] font-mono tracking-widest text-neutral-300 uppercase px-2.5 py-1 bg-white/5 rounded-full border border-white/10">Active</span>
+</div>
+</div>
+</div>
+</div>
+<!-- END: Right Hero Visual Stage -->
+</div>
+<!-- END: HeroMainGrid -->
+</header>
+</div>
+<!-- END: MainHeroContainer -->
+<!-- BEGIN: Affiliations Strip -->
+<section class="max-w-7xl mx-auto px-4 pb-12" data-purpose="affiliations-banner">
+<div class="bg-obsidian-900/90 border border-white/10 rounded-2xl p-5 sm:p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+<span class="text-xs font-bold uppercase tracking-widest text-blush-400">
+        ACADEMIC &amp; ORGANIZATIONAL JOURNEY
+      </span>
+<div class="flex flex-wrap items-center justify-center gap-3">
+<span class="px-4 py-2 rounded-full text-xs font-medium tracking-wide bg-white/5 text-neutral-200 border border-white/10 hover:border-roseGlow/40 transition">
+          INSTITUT TEKNOLOGI PLN
+        </span>
+<span class="text-roseGlow/40 text-xs">✦</span>
+<span class="px-4 py-2 rounded-full text-xs font-medium tracking-wide bg-white/5 text-neutral-200 border border-white/10 hover:border-roseGlow/40 transition">
+          SMA SWASTA KATOLIK BINTANG LAUT
+        </span>
+<span class="text-roseGlow/40 text-xs">✦</span>
+<span class="px-4 py-2 rounded-full text-xs font-medium tracking-wide bg-white/5 text-neutral-200 border border-white/10 hover:border-roseGlow/40 transition">
+          EKSKUL PRAMUKA
+        </span>
+</div>
+</div>
+</section>
+<!-- END: Affiliations Strip -->
+<!-- BEGIN: BentoGridSection -->
+<!-- 2-Column Blush Surface Bento Layout (#EFE3E2) -->
+<main class="max-w-7xl mx-auto px-4 pb-16" id="about">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- LEFT BENTO: About Berliana Card -->
+<article class="lg:col-span-7 bg-blush-200 rounded-[28px] p-6 sm:p-8 md:p-10 border border-white shadow-xl flex flex-col justify-between" data-purpose="about-card">
+<div>
+<!-- Eyebrow -->
+<div class="flex items-center gap-2 mb-3">
+<span class="w-2 h-2 rounded-full bg-blush-500"></span>
+<span class="text-xs font-bold uppercase tracking-widest text-blush-500">ABOUT ME</span>
+</div>
+<!-- Editorial Serif Heading -->
+<h2 class="font-serif text-3xl sm:text-4xl text-neutral-900 font-normal leading-snug mb-5">
+            Building logic, structure, and meaningful digital presence.
+          </h2>
+<!-- Content Grid: Text & Portrait Image -->
+<div class="grid grid-cols-1 sm:grid-cols-12 gap-6 items-start">
+<!-- Bio text -->
+<div class="sm:col-span-7 space-y-3.5 text-sm sm:text-base text-neutral-700 leading-relaxed font-light">
+<p class="font-medium text-neutral-900">
+                Hi, Berliana here! Welcome to my portfolio.
+              </p>
+<p>
+                Mahasiswa S1 Sistem Informasi yang sedang berkuliah di Institut Teknologi PLN (ITPLN) dengan ketertarikan pada pengembangan teknologi informasi dan pemrograman.
+              </p>
+<p>
+                Memiliki dasar pemrograman C++, pembuatan profil digital melalui Wixsite, serta terbiasa bekerja sama dalam tim dengan penuh tanggung jawab dan disiplin.
+              </p>
+</div>
+<!-- Portrait Frame -->
+<div class="sm:col-span-5 flex justify-center">
+<div class="relative w-full max-w-[210px] aspect-[3/4] rounded-2xl overflow-hidden border-2 border-white shadow-md bg-blush-300">
+<img alt="Warm editorial portrait of a young Indonesian female university student in her late teens or early 20s, friendly smiling expression, soft warm rose and blush ambient lighting, aesthetic soft studio background, high quality editorial portrait photo" class="w-full h-full object-cover object-top hover:scale-105 transition duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVqAmj756jFwnXPyFdVHgvvXj5SPj13MgmUZ3lFQEo3Yui96-ijdLtedEttxoCsB2G-uoVCgVThFI62xlm3Ye1hA0ZyGBfSv3eppgbK-pCKjTHZ5SlLHfrJCX0m36A5OW1En8Ll6W9F7j8ihQDN5S8L0H2wVSAEh2mYawIJTVqeudRlGtuFG6cfeoQTsL71q3II4OZ1IwyXPf3FPaOAfHOnUO0VpEQXy8cceMYwuQ"/>
+<div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-neutral-900/60 to-transparent p-2 text-center">
+<p class="text-[11px] font-medium text-white tracking-wide">Berliana Putri S.Z.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Meta Info Pills -->
+<div class="mt-8 pt-6 border-t border-blush-300/80 flex flex-col gap-2.5 text-xs text-neutral-700">
+<div class="flex items-center gap-2">
+<span class="text-blush-500">📍</span>
+<span class="font-medium">Jakarta Barat, DKI Jakarta</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-blush-500">🎓</span>
+<span>S1 Sistem Informasi — <strong class="text-neutral-900">Institut Teknologi PLN</strong> (Sep 2026 – Sekarang)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-blush-500">🏫</span>
+<span>Jurusan IPA — <strong class="text-neutral-900">SMA Swasta Katolik Bintang Laut</strong> (2023 – 2026)</span>
+</div>
+</div>
+</article>
+<!-- END: LEFT BENTO -->
+<!-- RIGHT BENTO: What I Do & Core Capabilities -->
+<section class="lg:col-span-5 bg-blush-200 rounded-[28px] p-6 sm:p-8 md:p-10 border border-white shadow-xl flex flex-col justify-between" data-purpose="capabilities-card" id="skills">
+<div>
+<!-- Eyebrow -->
+<div class="flex items-center gap-2 mb-3">
+<span class="w-2 h-2 rounded-full bg-blush-500"></span>
+<span class="text-xs font-bold uppercase tracking-widest text-blush-500">WHAT WE DO / CORE CAPABILITIES</span>
+</div>
+<h3 class="font-serif text-2xl sm:text-3xl text-neutral-900 font-normal mb-6">
+            Disciplined logic &amp; modern execution.
+          </h3>
+<!-- 4 Structured Rows with Circular Rose Icon Badges -->
+<div class="space-y-4">
+<!-- Row 1: Information Systems -->
+<div class="flex items-start gap-3.5 p-3 rounded-2xl bg-white/60 hover:bg-white transition duration-200">
+<div class="w-10 h-10 rounded-full bg-blush-300 text-blush-600 flex items-center justify-center font-bold text-sm shrink-0">
+                IS
+              </div>
+<div>
+<h4 class="text-sm font-semibold text-neutral-900">Information Systems</h4>
+<p class="text-xs text-neutral-600 leading-relaxed mt-0.5">
+                  Mempelajari analisis sistem, dasar teknologi informasi, dan pengelolaan data di Institut Teknologi PLN.
+                </p>
+</div>
+</div>
+<!-- Row 2: C++ Programming -->
+<div class="flex items-start gap-3.5 p-3 rounded-2xl bg-white/60 hover:bg-white transition duration-200">
+<div class="w-10 h-10 rounded-full bg-blush-300 text-blush-600 flex items-center justify-center font-bold text-sm shrink-0">
+                &lt;/&gt;
+              </div>
+<div>
+<h4 class="text-sm font-semibold text-neutral-900">C++ Programming</h4>
+<p class="text-xs text-neutral-600 leading-relaxed mt-0.5">
+                  Mengembangkan logika pemrograman terstruktur, alur algoritma, dan ketelitian kode menggunakan bahasa C++.
+                </p>
+</div>
+</div>
+<!-- Row 3: Web & Digital Profile -->
+<div class="flex items-start gap-3.5 p-3 rounded-2xl bg-white/60 hover:bg-white transition duration-200">
+<div class="w-10 h-10 rounded-full bg-blush-300 text-blush-600 flex items-center justify-center font-bold text-sm shrink-0">
+                🌐
+              </div>
+<div>
+<h4 class="text-sm font-semibold text-neutral-900">Web &amp; Digital Profile</h4>
+<p class="text-xs text-neutral-600 leading-relaxed mt-0.5">
+                  Merancang halaman profil personal dan portofolio digital yang rapi serta mudah diakses melalui Wixsite.
+                </p>
+</div>
+</div>
+<!-- Row 4: Teamwork & Leadership -->
+<div class="flex items-start gap-3.5 p-3 rounded-2xl bg-white/60 hover:bg-white transition duration-200">
+<div class="w-10 h-10 rounded-full bg-blush-300 text-blush-600 flex items-center justify-center font-bold text-sm shrink-0">
+                🤝
+              </div>
+<div>
+<h4 class="text-sm font-semibold text-neutral-900">Teamwork &amp; Leadership</h4>
+<p class="text-xs text-neutral-600 leading-relaxed mt-0.5">
+                  Terbiasa berkolaborasi dengan disiplin dan tanggung jawab, diasah melalui pengalaman organisasi di Ekskul Pramuka (2023).
+                </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Toolkit Pills -->
+<div class="mt-8 pt-5 border-t border-blush-300/80">
+<p class="text-[11px] font-bold uppercase tracking-wider text-neutral-500 mb-2.5">Toolkit &amp; Soft Skills</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-white rounded-full text-xs font-semibold text-neutral-800 border border-blush-300">C++</span>
+<span class="px-3 py-1 bg-white rounded-full text-xs font-semibold text-neutral-800 border border-blush-300">Wixsite</span>
+<span class="px-3 py-1 bg-white rounded-full text-xs font-semibold text-neutral-800 border border-blush-300">Microsoft Word</span>
+<span class="px-3 py-1 bg-white rounded-full text-xs font-semibold text-neutral-800 border border-blush-300">Teamwork</span>
+<span class="px-3 py-1 bg-white rounded-full text-xs font-semibold text-neutral-800 border border-blush-300">Responsibility</span>
+</div>
+</div>
+</section>
+<!-- END: RIGHT BENTO -->
+</div>
+</main>
+<!-- END: BentoGridSection -->
+<!-- BEGIN: RecentWorkSection -->
+<section class="max-w-7xl mx-auto px-4 pb-20" data-purpose="recent-work-portfolio" id="projects">
+<!-- Section Header -->
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="w-2 h-2 rounded-full bg-roseGlow"></span>
+<span class="text-xs font-bold uppercase tracking-widest text-roseGlow">RECENT WORK</span>
+</div>
+<h2 class="font-serif text-3xl sm:text-5xl text-[#FBF4F4] font-normal">
+          Selected Projects.
+        </h2>
+</div>
+<a class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-roseGlow hover:text-white transition duration-200 group" href="https://berlianaputrizebua.wixsite.com/about-me" rel="noopener noreferrer" target="_blank">
+<span>VIEW WIXSITE PROFILE</span>
+<span class="transform group-hover:translate-x-1 transition duration-200">→</span>
+</a>
+</div>
+<!-- Projects Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+<!-- Card 1: Program C++ -->
+<article class="bg-obsidian-900 border border-white/10 rounded-3xl overflow-hidden hover:border-roseGlow/50 transition-all duration-300 flex flex-col group glow-border-hover">
+<div class="relative aspect-video w-full overflow-hidden bg-black">
+<img alt="A sleek modern dark-themed code editor showing structured C++ programming code with syntax highlighting in soft pastel pink, rose, and white accents, running terminal output on clean screen, aesthetic tech aesthetic" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4BAee5N-Q_kOcHOv35KKALMhEYv3JsEjX6IW-IW8fA_dpNBGujJ_mSgcz48f25ZBSP-sjVuUfXhd-s2ZoA7v2mH4D4RCa2604R7cof9HAriB7nxzE8D_xRlSd6XobIlaBsxdcFXFyWNczGRpYX-Z2RyAwLzvXxjoMsBicuIf8U7RnZYSoZkANQYjQIO9su4WClIiF9GEKxcOJj4aX6nJaE3GUxDzr7YPQFs5BLb4"/>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-obsidian-950/80 text-roseGlow border border-roseGlow/40 backdrop-blur-md">
+              2026 · PROGRAMMER
+            </span>
+</div>
+</div>
+<div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-serif text-2xl sm:text-3xl text-white font-normal mb-2">
+              Program C++
+            </h3>
+<p class="text-sm text-neutral-300 leading-relaxed mb-6 font-light">
+              Pengembangan program berbasis bahasa C++ untuk melatih logika pemrograman dan penyelesaian masalah terstruktur.
+            </p>
+<ul class="space-y-2.5 text-xs text-neutral-300 mb-6 border-y border-white/10 py-4">
+<li class="flex items-center gap-2">
+<span class="text-roseGlow">✦</span>
+<span><strong>Tech Stack:</strong> C++</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-roseGlow mt-0.5">✦</span>
+<span><strong>Fokus Utama:</strong> Struktur logika, alur program, dan ketelitian kode.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-roseGlow mt-0.5">✦</span>
+<span><strong>Dampak:</strong> Memperkuat dasar pemrograman untuk pengembangan sistem informasi.</span>
+</li>
+</ul>
+</div>
+<a class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-roseGlow hover:text-white transition duration-200 pt-2" href="https://github.com/berlianazebua/cpp-program" rel="noopener noreferrer" target="_blank">
+<span>View project</span>
+<span>↗</span>
+</a>
+</div>
+</article>
+<!-- Card 2: Project Wixsite -->
+<article class="bg-obsidian-900 border border-white/10 rounded-3xl overflow-hidden hover:border-roseGlow/50 transition-all duration-300 flex flex-col group glow-border-hover">
+<div class="relative aspect-video w-full overflow-hidden bg-black">
+<img alt="A refined, elegant personal portfolio webpage mockup on a modern laptop screen, blush pink and dark espresso layout with editorial typography, showcasing a clean digital profile and about-me presentation" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWJzIS25Uyo-tlmUmzzaD9wFRxmidwngLU8DgidKb8VQ4wO4CjkDHQ1DIaEZ2VUVVTEbEn3H10rABTB-ryhIzS61kG0KqmD1A6mcJ0h7-JipnNnEK0WhLE8M6jHBHprvvvHY5k85DZuxftZjsrmFjFYrlI9OOOVBm4qBsGwLEyQRzEPfDGQUHkYeTBeLT8q-N42nhp3BTM_k6p2h9Cop5vlU3pIe7Hl1MJ3MqXHOI"/>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-obsidian-950/80 text-roseGlow border border-roseGlow/40 backdrop-blur-md">
+              2026 · WEB &amp; PROFILE CREATOR
+            </span>
+</div>
+</div>
+<div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-serif text-2xl sm:text-3xl text-white font-normal mb-2">
+              Project Wixsite
+            </h3>
+<p class="text-sm text-neutral-300 leading-relaxed mb-6 font-light">
+              Pembuatan halaman profil dan portofolio digital interaktif melalui platform Wixsite.
+            </p>
+<ul class="space-y-2.5 text-xs text-neutral-300 mb-6 border-y border-white/10 py-4">
+<li class="flex items-center gap-2">
+<span class="text-roseGlow">✦</span>
+<span><strong>Tech Stack:</strong> Wixsite</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-roseGlow mt-0.5">✦</span>
+<span><strong>Fokus Utama:</strong> Penyajian informasi profil diri secara jelas, rapi, dan mudah diakses.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-roseGlow mt-0.5">✦</span>
+<span><strong>Dampak:</strong> Menyediakan tautan profil personal online yang terstruktur.</span>
+</li>
+</ul>
+</div>
+<a class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-roseGlow hover:text-white transition duration-200 pt-2" href="https://berlianaputrizebua.wixsite.com/about-me" rel="noopener noreferrer" target="_blank">
+<span>View project</span>
+<span>↗</span>
+</a>
+</div>
+</article>
+</div>
+<!-- Digital Profile Showcase Strip -->
+<div class="bg-gradient-to-r from-obsidian-900 via-obsidian-850 to-obsidian-900 border border-roseGlow/30 rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-roseGlow/20 text-roseGlow border border-roseGlow/40">
+          FREE DIGITAL PROFILE
+        </span>
+<h4 class="font-serif text-lg sm:text-xl text-white">Halaman Profil Personal (Wixsite)</h4>
+</div>
+<a class="px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-white/10 text-white hover:bg-roseGlow hover:text-obsidian-950 transition-all duration-300" href="https://berlianaputrizebua.wixsite.com/about-me" rel="noopener noreferrer" target="_blank">
+        VISIT LIVE SITE ↗
+      </a>
+</div>
+</section>
+<!-- END: RecentWorkSection -->
+<!-- BEGIN: CollaborationSection -->
+<section class="max-w-7xl mx-auto px-4 pb-20" data-purpose="collaboration">
+<div class="flex flex-col mb-8">
+<div class="flex items-center gap-2 mb-1">
+<span class="w-2 h-2 rounded-full bg-roseGlow"></span>
+<span class="text-xs font-bold uppercase tracking-widest text-roseGlow">COLLABORATION</span>
+</div>
+<h2 class="font-serif text-3xl sm:text-5xl text-[#FBF4F4] font-normal">
+        Work With Me.
+      </h2>
+</div>
+<!-- Featured Service Card -->
+<div class="bg-blush-200 rounded-3xl p-6 sm:p-10 border border-white shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+<div class="space-y-2">
+<div class="flex flex-wrap items-center gap-3">
+<span class="px-3 py-1 bg-blush-300 rounded-full text-xs font-semibold text-neutral-800">Online / Jakarta</span>
+<span class="px-3 py-1 bg-white rounded-full text-xs font-semibold text-blush-600">2+ Featured Works</span>
+</div>
+<h3 class="font-serif text-2xl sm:text-4xl text-neutral-900 font-medium">Digital Profile &amp; C++ Basics</h3>
+<p class="text-neutral-600 text-sm max-w-xl font-light">
+          Siap berkolaborasi dalam proyek tim sistem informasi, penyusunan dokumentasi, maupun pembuatan profil digital berbasis web.
+        </p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="text-xs font-medium text-neutral-700 bg-white/80 px-2.5 py-1 rounded-md border border-blush-300">Wixsite</span>
+<span class="text-xs font-medium text-neutral-700 bg-white/80 px-2.5 py-1 rounded-md border border-blush-300">C++</span>
+<span class="text-xs font-medium text-neutral-700 bg-white/80 px-2.5 py-1 rounded-md border border-blush-300">Collaboration</span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row md:flex-col gap-3 w-full md:w-auto shrink-0">
+<a class="px-8 py-3.5 rounded-full text-xs sm:text-sm font-semibold tracking-wider uppercase bg-obsidian-950 text-white hover:bg-roseGlow hover:text-obsidian-950 transition-all duration-300 text-center glow-rose-sm" href="mailto:berlianaputrizebua@gmail.com">
+          LET'S COLLAB →
+        </a>
+<button class="px-4 py-2 rounded-full text-xs font-medium tracking-wide bg-white text-neutral-700 border border-blush-300 hover:bg-blush-100 text-center transition" onclick="navigator.clipboard.writeText('berlianaputrizebua@gmail.com'); alert('Email disalin ke clipboard!');">
+          Copy Email: berlianaputrizebua@gmail.com
+        </button>
+</div>
+</div>
+</section>
+<!-- END: CollaborationSection -->
+<!-- BEGIN: TestimonialAndAchievements -->
+<section class="max-w-7xl mx-auto px-4 pb-20">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Left Card: Dark Obsidian with rose glow (What They Said) -->
+<div class="lg:col-span-6 bg-obsidian-900 border border-roseGlow/30 rounded-3xl p-6 sm:p-10 flex flex-col justify-between glow-rose-sm">
+<div>
+<div class="flex items-center gap-2 mb-6">
+<span class="w-2 h-2 rounded-full bg-roseGlow"></span>
+<span class="text-xs font-bold uppercase tracking-widest text-roseGlow">WHAT THEY SAID</span>
+</div>
+<blockquote class="font-serif italic text-2xl sm:text-3xl text-neutral-100 leading-snug mb-8">
+            “Dapat bekerja sama dalam tim serta bertanggung jawab dalam menjalankan tugas yang diberikan.”
+          </blockquote>
+</div>
+<div class="flex items-center gap-3 pt-4 border-t border-white/10">
+<div class="w-10 h-10 rounded-full bg-roseGlow/20 border border-roseGlow/40 flex items-center justify-center text-roseGlow font-serif font-bold">
+            R
+          </div>
+<div>
+<p class="text-sm font-semibold text-white">Rekan Tim</p>
+<p class="text-xs text-roseGlow/80">Kolaborator Kegiatan</p>
+</div>
+</div>
+</div>
+<!-- Right Card: Surface blush (Achievements & Workshops) -->
+<div class="lg:col-span-6 bg-blush-200 rounded-3xl p-6 sm:p-10 border border-white shadow-xl flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="w-2 h-2 rounded-full bg-blush-500"></span>
+<span class="text-xs font-bold uppercase tracking-widest text-blush-500">ACHIEVEMENTS &amp; WORKSHOPS</span>
+</div>
+<h3 class="font-serif text-2xl sm:text-3xl text-neutral-900 font-normal mb-6">Milestones.</h3>
+<div class="space-y-5">
+<!-- Item 1 -->
+<div class="p-4 rounded-2xl bg-white/70 border border-white">
+<p class="text-xs font-bold uppercase tracking-wider text-blush-600 mb-1">Workshop SAQ 2026 (2026)</p>
+<h4 class="text-sm font-semibold text-neutral-900 mb-1">
+                ✦ Peserta Technical Meeting &amp; Workshop Vibe Coding Portfolio Website
+              </h4>
+<p class="text-xs text-neutral-600">
+                Mengikuti lokakarya intensif untuk pembuatan portofolio website modern berbasis kode dan tren estetika terkini.
+              </p>
+</div>
+<!-- Item 2 -->
+<div class="p-4 rounded-2xl bg-white/70 border border-white">
+<p class="text-xs font-bold uppercase tracking-wider text-blush-600 mb-1">Organisasi Kepanduan (2023)</p>
+<h4 class="text-sm font-semibold text-neutral-900 mb-1">
+                ✦ Anggota Aktif Ekskul Pramuka
+              </h4>
+<p class="text-xs text-neutral-600">
+                Membentuk karakter disiplin, mandiri, bertanggung jawab, kepemimpinan, dan kerja sama tim yang tangguh.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: TestimonialAndAchievements -->
+<!-- BEGIN: TheJourneySection -->
+<section class="max-w-7xl mx-auto px-4 pb-20" data-purpose="scrapbook-milestones" id="journey">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="w-2 h-2 rounded-full bg-roseGlow"></span>
+<span class="text-xs font-bold uppercase tracking-widest text-roseGlow">THE JOURNEY</span>
+</div>
+<h2 class="font-serif text-3xl sm:text-5xl text-[#FBF4F4] font-normal">
+          Moments &amp; Milestones.
+        </h2>
+</div>
+<span class="px-4 py-1.5 rounded-full text-xs font-bold tracking-widest bg-roseGlow/20 text-roseGlow border border-roseGlow/40 w-fit">
+        2026
+      </span>
+</div>
+<!-- Scrapbook Card -->
+<div class="bg-obsidian-900 border border-white/10 rounded-3xl p-6 sm:p-8 flex flex-col md:flex-row items-center gap-6">
+<div class="w-full md:w-1/3 aspect-video md:aspect-[4/3] rounded-2xl overflow-hidden bg-obsidian-950 border border-roseGlow/20">
+<img alt="Warm editorial portrait of a young Indonesian female university student in her late teens or early 20s, friendly smiling expression, soft warm rose and blush ambient lighting, aesthetic soft studio background, high quality editorial portrait photo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEfhnTCIVm8c4aW8Es5dXqb1EvwKMhYo-rjBTC33RFNWFbW8S9zNbnLUqyS5hmV-p-MJy_f8BCrLKAoQXdO8QBAgdFc0htFmVHOGaJ5FsU-qTsQsIBDfVz2dzSWii3jmeXzK1fdK48QggvXT8SNi7mAU81jz8PXBRlvmK1YhtjXWkWHrHJMfPczuHQNBD6QOxgW6m7HDbsVlaJgjA8mbB3LclPvdIFNMhBTlwpmGc"/>
+</div>
+<div class="w-full md:w-2/3 space-y-3">
+<span class="px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase bg-white/5 text-roseGlow border border-roseGlow/30">
+          CAMPUS LIFE · 2026
+        </span>
+<h3 class="font-serif text-2xl sm:text-3xl text-white">Mulai kuliah S1 Sistem Informasi di ITPLN</h3>
+<p class="text-sm text-neutral-300 leading-relaxed font-light">
+          Langkah awal perjalanan akademik mendalami teknologi informasi, analisis logika perancangan sistem, serta membangun jejaring dengan rekan-rekan mahasiswa di Institut Teknologi PLN Jakarta.
+        </p>
+</div>
+</div>
+</section>
+<!-- END: TheJourneySection -->
+<!-- BEGIN: BottomCtaBanner -->
+<section class="max-w-7xl mx-auto px-4 pb-16">
+<div class="bg-gradient-to-r from-roseGlow via-roseGlow-bright to-roseGlow rounded-3xl p-8 sm:p-12 text-obsidian-950 glow-rose-lg flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="text-center md:text-left">
+<h3 class="font-serif text-2xl sm:text-4xl font-semibold tracking-tight mb-2">
+          ✦ Let's create something meaningful together.
+        </h3>
+<p class="text-xs sm:text-sm text-obsidian-900/80 font-medium">
+          Terbuka untuk diskusi proyek perkuliahan, profil digital, dan kolaborasi positif.
+        </p>
+</div>
+<a class="px-8 py-4 rounded-full text-xs sm:text-sm font-bold tracking-wider uppercase bg-obsidian-950 text-white hover:bg-neutral-900 transition-all duration-300 shrink-0 shadow-lg" href="mailto:berlianaputrizebua@gmail.com">
+        GET IN TOUCH →
+      </a>
+</div>
+</section>
+<!-- END: BottomCtaBanner -->
+<!-- BEGIN: MainFooter -->
+<footer class="bg-obsidian-950 border-t border-white/10 text-neutral-400 py-12 px-4">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+<!-- Identity -->
+<div class="text-center md:text-left space-y-1">
+<p class="font-serif text-xl text-white font-medium">Berliana Putri Sanora Zebua</p>
+<p class="text-xs text-neutral-400">S1 Sistem Informasi · Institut Teknologi PLN · Jakarta Barat</p>
+</div>
+<!-- Social and External Links -->
+<div class="flex flex-wrap items-center justify-center gap-3">
+<a class="px-4 py-2 rounded-full text-xs font-medium tracking-wide bg-white/5 text-neutral-200 border border-white/10 hover:border-roseGlow/50 hover:text-roseGlow transition" href="https://wa.me/" rel="noopener noreferrer" target="_blank">
+          WhatsApp
+        </a>
+<a class="px-4 py-2 rounded-full text-xs font-medium tracking-wide bg-white/5 text-neutral-200 border border-white/10 hover:border-roseGlow/50 hover:text-roseGlow transition" href="https://instagram.com/" rel="noopener noreferrer" target="_blank">
+          Instagram
+        </a>
+<a class="px-4 py-2 rounded-full text-xs font-medium tracking-wide bg-white/5 text-neutral-200 border border-white/10 hover:border-roseGlow/50 hover:text-roseGlow transition" href="https://linkedin.com/" rel="noopener noreferrer" target="_blank">
+          LinkedIn
+        </a>
+<a class="px-4 py-2 rounded-full text-xs font-medium tracking-wide bg-white/5 text-neutral-200 border border-white/10 hover:border-roseGlow/50 hover:text-roseGlow transition" href="https://berlianaputrizebua.wixsite.com/about-me" rel="noopener noreferrer" target="_blank">
+          Website (Wixsite)
+        </a>
+</div>
+<!-- Copyright -->
+<div class="text-center md:text-right text-xs text-neutral-500">
+<p>© 2026 Berliana Putri Sanora Zebua.</p>
+<p class="text-[11px] text-neutral-600 mt-0.5">All Rights Reserved.</p>
+</div>
+</div>
+</footer>
+<!-- END: MainFooter -->
+<!-- BEGIN: Interactive Role Switcher Script -->
+<script data-purpose="hero-role-toggle">
+    function switchRole(roleNumber) {
+      const headlineTarget = document.getElementById('role-headline-target');
+      const btn1 = document.getElementById('role-btn-1');
+      const btn2 = document.getElementById('role-btn-2');
+
+      if (roleNumber === 1) {
+        headlineTarget.textContent = 'Information Systems Student.';
+        
+        btn1.className = 'role-pill inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-[11px] font-semibold tracking-wider bg-roseGlow/20 border border-roseGlow text-roseGlow cursor-pointer transition-all duration-300';
+        btn1.querySelector('span:first-child').className = 'w-1.5 h-1.5 rounded-full bg-roseGlow animate-ping';
+        
+        btn2.className = 'role-pill inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-[11px] font-semibold tracking-wider bg-white/5 border border-white/10 text-neutral-400 hover:text-neutral-200 cursor-pointer transition-all duration-300';
+        btn2.querySelector('span:first-child').className = 'w-1.5 h-1.5 rounded-full bg-neutral-500';
+      } else {
+        headlineTarget.textContent = 'C++ & Web Profile Creator.';
+        
+        btn2.className = 'role-pill inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-[11px] font-semibold tracking-wider bg-roseGlow/20 border border-roseGlow text-roseGlow cursor-pointer transition-all duration-300';
+        btn2.querySelector('span:first-child').className = 'w-1.5 h-1.5 rounded-full bg-roseGlow animate-ping';
+        
+        btn1.className = 'role-pill inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-[11px] font-semibold tracking-wider bg-white/5 border border-white/10 text-neutral-400 hover:text-neutral-200 cursor-pointer transition-all duration-300';
+        btn1.querySelector('span:first-child').className = 'w-1.5 h-1.5 rounded-full bg-neutral-500';
+      }
+    }
+  </script>
+<!-- END: Interactive Role Switcher Script -->
+</body></html>

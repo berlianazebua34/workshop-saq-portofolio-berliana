@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-obsidian-950: #0E0A0B;
+  --color-obsidian-900: #151011;
+  --color-obsidian-850: #1D1618;
+  --color-obsidian-800: #251D20;
+
+  --color-blush-50: #FDF9F9;
+  --color-blush-100: #F9F1F1;
+  --color-blush-150: #F3E8E8;
+  --color-blush-200: #EFE3E2;
+  --color-blush-300: #E4CFD0;
+  --color-blush-400: #D9B5B8;
+  --color-blush-500: #B86B77;
+  --color-blush-600: #9E4E5A;
+
+  --color-roseGlow: #F9B8C4;
+  --color-roseGlow-bright: #FFCCD6;
+  --color-roseGlow-deep: #D97C8F;
+
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer utilities {
+  .glow-rose-sm {
+    box-shadow: 0 0 20px -3px rgba(249, 184, 196, 0.35);
+  }
+  .glow-rose-md {
+    box-shadow: 0 0 35px -2px rgba(249, 184, 196, 0.45);
+  }
+  .glow-rose-lg {
+    box-shadow: 0 0 50px 0 rgba(249, 184, 196, 0.35);
+  }
+  .glow-border {
+    border: 1px solid rgba(249, 184, 196, 0.32);
+  }
+  .glow-border-hover:hover {
+    border-color: rgba(249, 184, 196, 0.65);
+    box-shadow: 0 0 25px rgba(249, 184, 196, 0.3);
+  }
+  .glass-obsidian {
+    background: rgba(21, 16, 17, 0.72);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+  .glass-blush {
+    background: rgba(239, 227, 226, 0.88);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  .tracking-widest-plus {
+    letter-spacing: 0.18em;
+  }
+  .editorial-dots {
+    background-image: radial-gradient(rgba(249, 184, 196, 0.12) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
